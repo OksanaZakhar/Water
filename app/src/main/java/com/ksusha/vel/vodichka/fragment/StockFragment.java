@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -32,6 +33,20 @@ public class StockFragment extends Fragment {
 
         setWaterRecycler(DataForFragment.stockList);
 
+        waterRecycler.addOnChildAttachStateChangeListener(new RecyclerView.OnChildAttachStateChangeListener() {
+            @Override
+            public void onChildViewAttachedToWindow(@NonNull View view) {
+            }
+
+            @Override
+            public void onChildViewDetachedFromWindow(@NonNull View view) {
+                if (DataForFragment.countBasket > 0) {
+                    ((TextView) getActivity().findViewById(R.id.allCountBasket)).setText(Integer.toString(DataForFragment.countBasket));
+                } else {
+                    ((TextView) getActivity().findViewById(R.id.allCountBasket)).setText("");
+                }
+            }
+        });
         return view;
 
     }
