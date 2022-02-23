@@ -47,7 +47,8 @@
             android:fontFamily="@font/amiko_bold"
             app:layout_constraintBottom_toTopOf="@+id/whiteFieldStock"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
