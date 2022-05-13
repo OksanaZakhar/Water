@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,8 +43,10 @@ public class StockFragment extends Fragment {
             public void onChildViewDetachedFromWindow(@NonNull View view) {
                 if (DataForFragment.countBasket > 0) {
                     ((TextView) getActivity().findViewById(R.id.allCountBasket)).setText(Integer.toString(DataForFragment.countBasket));
+                    ((ImageView) getActivity().findViewById(R.id.circleAllCountBasket)).setVisibility(View.VISIBLE);
                 } else {
                     ((TextView) getActivity().findViewById(R.id.allCountBasket)).setText("");
+                    ((ImageView)getActivity().findViewById(R.id.circleAllCountBasket)).setVisibility(View.GONE);
                 }
             }
         });

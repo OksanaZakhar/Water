@@ -1,6 +1,7 @@
 package com.ksusha.vel.vodichka;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,7 +27,8 @@ import com.ksusha.vel.vodichka.fragments_page.MainWaterPage;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
-    ImageButton buttonHistory, openDrawer;
+    ImageButton buttonHistory, openDrawer, buttonBasket, buttonStock, buttonMain;
+    TextView txtMain, txtBasket, txtStock;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
 
@@ -38,6 +40,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonHistory = findViewById(R.id.buttonHistory);
         buttonHistory.setOnClickListener(this);
+        buttonBasket = findViewById(R.id.buttonBasket);
+        buttonStock = findViewById(R.id.buttonStock);
+        buttonMain = findViewById(R.id.buttonMain);
+        txtBasket = findViewById(R.id.txtBasket);
+        txtStock = findViewById(R.id.txtStock);
+        txtMain = findViewById(R.id.txtMain);
+
+        buttonBasket.setColorFilter(Color.parseColor("#686868"));
+        txtBasket.setTextColor(Color.parseColor("#686868"));
+        buttonStock.setColorFilter(Color.parseColor("#686868"));
+        txtStock.setTextColor(Color.parseColor("#686868"));
+        buttonMain.setColorFilter(Color.parseColor("#005080"));
+        txtMain.setTextColor(Color.parseColor("#005080"));
+
 
         if (DataForFragment.waterList.size() == 0) {
             DataForFragment.initData();
@@ -75,9 +91,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (menuItem.getItemId()) {
             case R.id.oneMenu:
-                Toast.makeText(MainActivity.this, "One", Toast.LENGTH_SHORT).show();
+                Intent intentAuth = new Intent(MainActivity.this, Authentication.class);
+                startActivity(intentAuth);
                 break;
             case R.id.twoMenu:
+
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, "Check out the App at: https://play.google.com/store/apps/details?id=" + getPackageName());
@@ -103,20 +121,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return false;
     }
 
-
     public void Change(View view) {
         Fragment fragment = null;
         switch (view.getId()) {
             case R.id.buttonBasket:
                 fragment = new BasketFragment();
+                buttonBasket.setColorFilter(Color.parseColor("#005080"));
+                txtBasket.setTextColor(Color.parseColor("#005080"));
+                buttonStock.setColorFilter(Color.parseColor("#686868"));
+                txtStock.setTextColor(Color.parseColor("#686868"));
+                buttonMain.setColorFilter(Color.parseColor("#686868"));
+                txtMain.setTextColor(Color.parseColor("#686868"));
                 break;
             case R.id.buttonStock:
                 fragment = new StockFragment();
+                buttonBasket.setColorFilter(Color.parseColor("#686868"));
+                txtBasket.setTextColor(Color.parseColor("#686868"));
+                buttonStock.setColorFilter(Color.parseColor("#005080"));
+                txtStock.setTextColor(Color.parseColor("#005080"));
+                buttonMain.setColorFilter(Color.parseColor("#686868"));
+                txtMain.setTextColor(Color.parseColor("#686868"));
                 break;
             case R.id.buttonMain:
                 fragment = new MainFragment();
+                buttonBasket.setColorFilter(Color.parseColor("#686868"));
+                txtBasket.setTextColor(Color.parseColor("#686868"));
+                buttonStock.setColorFilter(Color.parseColor("#686868"));
+                txtStock.setTextColor(Color.parseColor("#686868"));
+                buttonMain.setColorFilter(Color.parseColor("#005080"));
+                txtMain.setTextColor(Color.parseColor("#005080"));
                 break;
-
             default:
                 break;
         }

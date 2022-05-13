@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Vodichka" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/main_theme_2</item>
-        <item name="colorPrimaryVariant">@color/main_theme_1</item>
+        <item name="colorPrimary">@color/main_theme_1</item>
+        <item name="colorPrimaryVariant">@color/main_theme</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

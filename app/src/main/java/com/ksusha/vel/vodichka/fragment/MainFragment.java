@@ -1,12 +1,13 @@
 package com.ksusha.vel.vodichka.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,8 @@ import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
+import com.ksusha.vel.vodichka.Authentication;
+import com.ksusha.vel.vodichka.MainActivity;
 import com.ksusha.vel.vodichka.R;
 import com.ksusha.vel.vodichka.ScaleLayoutManager;
 import com.ksusha.vel.vodichka.adapter.TopRecyclerAdapter;
@@ -41,6 +44,7 @@ public class MainFragment extends Fragment {
     TimerTask timerTask;
     int position;
     ScaleLayoutManager layoutManager;
+    ImageView imageAuthentication;
 
 
     @Override
@@ -56,6 +60,7 @@ public class MainFragment extends Fragment {
         buttonAxes = view.findViewById(R.id.imageButtonAxes);
         buttonCool = view.findViewById(R.id.imageButtonCool);
 
+        imageAuthentication = view.findViewById(R.id.imageAuthentication);
         buttonWater.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,13 +94,24 @@ public class MainFragment extends Fragment {
             public void onChildViewDetachedFromWindow(@NonNull View view) {
                 if (DataForFragment.countBasket > 0) {
                     ((TextView) getActivity().findViewById(R.id.allCountBasket)).setText(Integer.toString(DataForFragment.countBasket));
+                    ((ImageView) getActivity().findViewById(R.id.circleAllCountBasket)).setVisibility(View.VISIBLE);
                 } else {
                     ((TextView) getActivity().findViewById(R.id.allCountBasket)).setText("");
+                    ((ImageView)getActivity().findViewById(R.id.circleAllCountBasket)).setVisibility(View.GONE);
                 }
             }
         });
 
+        imageAuthentication.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentAuth = new Intent(getContext(), Authentication.class);
+                startActivity(intentAuth);
+            }
+        });
+
         return view;
+
     }
 
     private void changeButtonWater() {

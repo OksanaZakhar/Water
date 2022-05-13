@@ -66,30 +66,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/orderDeal"
-                android:layout_width="146dp"
+                android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/basket_button"
+                android:text="@string/basket_order"
+                android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck"
+                android:enabled="false"/>
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="33dp"
-                android:layout_marginEnd="10dp"
-                android:gravity="center"
-                android:text="@string/basket_order"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/orderDeal"
-                app:layout_constraintEnd_toEndOf="@+id/orderDeal"
-                app:layout_constraintLeft_toLeftOf="@+id/orderDeal"
-                app:layout_constraintTop_toTopOf="@+id/orderDeal"
-                app:layout_constraintVertical_bias="0.0" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

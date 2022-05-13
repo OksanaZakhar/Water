@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "714229593039",
+    "project_id": "vodichka-868bf",
+    "storage_bucket": "vodichka-868bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714229593039:android:4d27fa1d362c74b52858ba",
+        "android_client_info": {
+          "package_name": "com.ksusha.vel.vodichka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714229593039-1b4mtp7fec5dsoccqmnihh5400makigl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ksusha.vel.vodichka",
+            "certificate_hash": "bc3b8359c1d5c46781a235f540a28c10c16db987"
+          }
+        },
+        {
+          "client_id": "714229593039-jckfc5jf0jv953v3b1ji66e9qem92v37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWAhSjxiKiJVcH2PY4KZIokSXdIrhsbtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714229593039-jckfc5jf0jv953v3b1ji66e9qem92v37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
