@@ -1,4 +1,4 @@
-package com.ksusha.vel.vodichka.model;
+package com.ksusha.vel.vodichka.ui.model;
 
 public class Water {
 
@@ -13,7 +13,6 @@ public class Water {
         this.prise = prise;
         this.count = count;
         this.startCount = startCount;
-
         this.maskClicable = maskClicable;
         this.maskVisible = maskVisible;
 

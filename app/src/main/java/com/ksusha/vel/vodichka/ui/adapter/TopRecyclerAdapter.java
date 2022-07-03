@@ -1,18 +1,19 @@
-package com.ksusha.vel.vodichka.adapter;
+package com.ksusha.vel.vodichka.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.ksusha.vel.vodichka.R;
-import com.ksusha.vel.vodichka.model.TopRecycler;
+import com.ksusha.vel.vodichka.databinding.BottomSheetDialogLayoutBinding;
+import com.ksusha.vel.vodichka.databinding.TopRecyclerItemBinding;
+import com.ksusha.vel.vodichka.ui.model.TopRecycler;
 
 import java.util.List;
 
@@ -30,40 +31,38 @@ public class TopRecyclerAdapter extends RecyclerView.Adapter<TopRecyclerAdapter.
     @Override
     public TopRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        View topRecyclerItems = LayoutInflater.from(context).inflate(R.layout.top_recycler_item, parent, false);
-        return new TopRecyclerViewHolder(topRecyclerItems);
+        TopRecyclerItemBinding topRecyclerItemBinding = DataBindingUtil
+                .inflate(LayoutInflater.from(context),
+                        R.layout.top_recycler_item, parent, false);
+
+
+        return new TopRecyclerViewHolder(topRecyclerItemBinding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull TopRecyclerViewHolder holder, int position) {
         int actualPosition = position % topRecyclers.size();
         int imageId = context.getResources().getIdentifier(topRecyclers.get(actualPosition).getTopCardImage(), "drawable", context.getPackageName());
-        holder.topCardImage.setImageResource(imageId);
+        holder.topRecyclerItemBinding.topCardImage.setImageResource(imageId);
 
 
-        holder.topCardImage.setOnClickListener(new View.OnClickListener() {
+        holder.topRecyclerItemBinding.topCardImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
-                View view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_dialog_layout, null);
-
-                ImageView imageView = view.findViewById(R.id.imageBottomSheet);
+                BottomSheetDialogLayoutBinding bottomSheetDialogLayoutBinding = DataBindingUtil
+                        .inflate(LayoutInflater.from(context),
+                                R.layout.bottom_sheet_dialog_layout, null, false);
+                View view = bottomSheetDialogLayoutBinding.getRoot();
                 int imageId = context.getResources().getIdentifier(topRecyclers.get(actualPosition).getTopCardImage(), "drawable", context.getPackageName());
-                imageView.setImageResource(imageId);
-
-                TextView textBottomTopic = view.findViewById(R.id.textBottomTopic);
-                textBottomTopic.setText(topRecyclers.get(actualPosition).getTopic());
-
-                TextView textBottomDescription = view.findViewById(R.id.textBottomDescription);
-                textBottomDescription.setText(topRecyclers.get(actualPosition).getDescription());
+                bottomSheetDialogLayoutBinding.imageBottomSheet.setImageResource(imageId);
+                bottomSheetDialogLayoutBinding.textBottomTopic.setText(topRecyclers.get(actualPosition).getTopic());
+                bottomSheetDialogLayoutBinding.textBottomDescription.setText(topRecyclers.get(actualPosition).getDescription());
 
                 bottomSheetDialog.setContentView(view);
                 bottomSheetDialog.show();
-
             }
         });
-
-
     }
 
     @Override
@@ -73,13 +72,12 @@ public class TopRecyclerAdapter extends RecyclerView.Adapter<TopRecyclerAdapter.
 
     public static final class TopRecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView topCardImage;
+        TopRecyclerItemBinding topRecyclerItemBinding;
 
-        public TopRecyclerViewHolder(@NonNull View itemView) {
-            super(itemView);
-            topCardImage = itemView.findViewById(R.id.topCardImage);
+
+        public TopRecyclerViewHolder(@NonNull TopRecyclerItemBinding topRecyclerItemBinding) {
+            super(topRecyclerItemBinding.getRoot());
+            this.topRecyclerItemBinding = topRecyclerItemBinding;
         }
     }
-
-
 }

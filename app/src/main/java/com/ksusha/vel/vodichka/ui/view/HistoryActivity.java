@@ -1,4 +1,4 @@
-package com.ksusha.vel.vodichka;
+package com.ksusha.vel.vodichka.ui.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,9 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.ksusha.vel.vodichka.R;
 
-public class HistoryActivity extends AppCompatActivity implements  View.OnClickListener{
+public class HistoryActivity extends AppCompatActivity implements View.OnClickListener {
 
     FloatingActionButton toMain;
 
@@ -24,7 +25,7 @@ public class HistoryActivity extends AppCompatActivity implements  View.OnClickL
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.goToMain:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
@@ -32,7 +33,6 @@ public class HistoryActivity extends AppCompatActivity implements  View.OnClickL
             default:
                 break;
         }
-
 
     }
 }

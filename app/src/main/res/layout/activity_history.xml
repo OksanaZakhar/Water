@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_theme_1"
     android:backgroundTint="@color/main_theme_1"
-    tools:context=".HistoryActivity">
+    tools:context=".ui.view.HistoryActivity">
 
 
     <ImageView

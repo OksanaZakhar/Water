@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".Splash">
+    tools:context=".ui.view.Splash">
 
     <ImageView
         android:id="@+id/imageView"

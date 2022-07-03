@@ -1,4 +1,4 @@
-package com.ksusha.vel.vodichka.model;
+package com.ksusha.vel.vodichka.ui.model;
 
 public class TopRecycler {
 

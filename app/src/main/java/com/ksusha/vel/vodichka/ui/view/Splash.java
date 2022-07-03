@@ -1,9 +1,11 @@
-package com.ksusha.vel.vodichka;
+package com.ksusha.vel.vodichka.ui.view;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.ksusha.vel.vodichka.R;
 
 public class Splash extends Activity {
     private final int SPLASH_DISPLAY = 5000;

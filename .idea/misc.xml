@@ -24,12 +24,13 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/drawable/ic_category_blue.xml" value="0.3671875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/drawable/ic_launcher_background.xml" value="0.31875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/drawable/open_nav.xml" value="0.2635" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/drawable/rectangle_rounded_all.xml" value="0.37552083333333336" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/drawable/stile_options.xml" value="0.37552083333333336" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_authentication.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_basket.xml" value="0.359375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_history.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_main2.xml" value="0.359375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_splash.xml" value="0.359375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/activity_stock.xml" value="0.359375" />
@@ -44,6 +45,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/stock_item.xml" value="0.359375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/top_recycler_item.xml" value="0.20625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/water_item.xml" value="0.5" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/layout/water_item_basket.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/menu/options.xml" value="0.359375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.37552083333333336" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Vodichka/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3435" />

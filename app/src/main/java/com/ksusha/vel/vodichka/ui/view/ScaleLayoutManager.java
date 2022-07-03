@@ -1,4 +1,4 @@
-package com.ksusha.vel.vodichka;
+package com.ksusha.vel.vodichka.ui.view;
 
 import android.content.Context;
 import android.view.View;
@@ -39,7 +39,6 @@ public class ScaleLayoutManager extends LinearLayoutManager {
                 float scale = s0 + (s1 - s0) * (d - d0) / (d1 - d0);
                 child.setScaleY(scale);
             }
-
             return scrolled;
         } else {
             return 0;
