@@ -75,13 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        mainActivityViewModel.getWaterList().observe(this, new Observer<List<WaterEntity>>() {
-            @Override
-            public void onChanged(List<WaterEntity> waterEntities) {
-                for (WaterEntity w : waterEntities) {
-                }
-            }
-        });
+   
         // это мы из данных апи переписываем в БД ВСЕ!!!!
 
         activityMainBinding.buttonBasket.setColorFilter(Color.parseColor("#686868"));
@@ -171,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return false;
     }
 
-    public void Change(View view) {
+    public void сhange(View view) {
         Fragment fragment = null;
         switch (view.getId()) {
             case R.id.buttonBasket:
